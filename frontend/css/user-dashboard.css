@@ -1,0 +1,159 @@
+/* Main container styling */
+.user-dashboard-main {
+  background: #f7f9fa;
+  min-height: 100vh;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* Card styling */
+.card {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  background: #fff;
+  margin-bottom: 24px;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+/* Card title */
+.card-title {
+  font-weight: 600;
+  color: #1a3557;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Button group styling */
+.btn-group .btn {
+  min-width: 110px;
+  font-weight: 500;
+  border-radius: 20px;
+}
+.btn-outline-primary.active,
+.btn-outline-primary:active {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+/* Chart canvas styling */
+canvas {
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Responsive grid for dashboard rows */
+@media (max-width: 991px) {
+  .row > .col-md-6, .row > .col-md-12 {
+    margin-bottom: 20px;
+  }
+}
+
+/* 1st row: Spend/Booking chart full width */
+.row.mb-4:first-of-type .col-md-6 {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+.row.mb-4:first-of-type .card {
+  margin-bottom: 0;
+}
+
+/* 2nd row: Donut and Pie charts side by side */
+.row.mb-4:nth-of-type(2) .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#userStatusDonutChart,
+#userBookingsLocationChart {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* 3rd row: Vehicle chart full width */
+.row.mb-4:last-of-type .col-md-6 {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+#userBookingsVehicleTypeChart {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Text muted styling */
+.text-muted {
+  font-size: 1rem;
+  color: #6c757d !important;
+}
+/* Chart legend styling */
+.chartjs-render-monitor {
+  margin: 0 auto;
+  display: block;
+}
+.dashboard-heading {
+    text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a3557;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+.monthly-chart-container {
+  width: 70vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#userMonthlySpendChart {
+  width: 100% !important;
+  height: 350px !important;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.monthly-chart-container,
+.vehicle-chart-container {
+  width: 70vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#userMonthlySpendChart,
+#userBookingsVehicleTypeChart {
+  width: 100% !important;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.dashboard-charts-container {
+  width: 90vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color:#ECF0F1 ;
+}
+.monthly-chart-container,
+.vehicle-chart-container {
+  width: 70vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#userMonthlySpendChart,
+#userBookingsVehicleTypeChart {
+  width: 100% !important;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}

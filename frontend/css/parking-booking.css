@@ -1,0 +1,120 @@
+/* Main card style */
+.user-parking-booking .card {
+  
+  box-shadow: var(--shadow);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+.user-parking-booking .card:hover {
+  box-shadow: 0 4px 12px rgba(44,62,80,0.08);
+}
+
+.user-parking-booking .card-title {
+
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.user-parking-booking .list-group-item {
+  background: var(--neutral-light);
+  border: none;
+  color: var(--neutral-dark);
+  font-size: 15px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.user-parking-booking .list-group-item.active,
+.user-parking-booking .list-group-item:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.user-parking-booking .btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 24px;
+  transition: background 0.2s;
+}
+
+.user-parking-booking .btn-primary:hover,
+.user-parking-booking .btn-primary:focus {
+  background: #16a085;
+}
+
+.user-parking-booking .modal-content {
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.user-parking-booking .modal-header {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+}
+
+.user-parking-booking .modal-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: #fff;
+}
+
+.user-parking-booking .modal-footer {
+  background: var(--neutral-light);
+  border-radius: 0 0 14px 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.user-parking-booking .rounded-circle {
+  box-shadow: var(--shadow);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: var(--neutral-light);
+  border: 2px solid var(--input-border);
+  transition: border 0.2s, background 0.2s;
+}
+.user-parking-booking .rounded-circle.selected,
+.user-parking-booking .rounded-circle:active {
+  border: 3px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.user-parking-booking .alert-danger {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+}
+.user-parking-booking .alert-success {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+
+.user-parking-booking .spinner-border {
+  color: var(--accent);
+}
+
+/* Tooltip for slot availability */
+.user-parking-booking .position-absolute {
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  font-size: 13px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .user-parking-booking .card {
+    padding: 16px;
+  }
+}

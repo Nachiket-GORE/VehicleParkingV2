@@ -1,0 +1,104 @@
+/* Color Palette */
+:root {
+  --primary: #2C3E50;
+  --accent: #1ABC9C;
+  --neutral-light: #ECF0F1;
+  --neutral-dark: #34495E;
+  --secondary: #E74C3C;
+  --disabled: #95A5A6;
+  --input-border: #BDC3C7;
+  --shadow: 0 2px 4px rgba(0,0,0,0.05);
+  --font-heading: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Main container */
+.container {
+  margin-top: 60px;
+}
+
+body, .login-bg {
+  min-height: 100vh;
+  background: url('/static/pics/login.jpg') center center/cover no-repeat;
+  background-attachment: fixed;
+}
+body, .register-bg {
+  min-height: 100vh;
+  background: url('/static/pics/register.jpg') center center/cover no-repeat;
+  background-attachment: fixed;
+}
+/* Card styling */
+.col-md-6 {
+  background:#cceff7;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 36px 32px 32px 32px;
+  font-family: var(--font-body);
+}
+
+/* Heading */
+h2 {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  padding: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px #d1f2eb;
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent) 60%, var(--primary) 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  color: #fff;
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+}
+
+/* Success & Error messages */
+.text-success {
+  color: var(--accent) !important;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.text-danger {
+  color: var(--secondary) !important;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col-md-6 {
+    padding: 24px 12px;
+  }
+}

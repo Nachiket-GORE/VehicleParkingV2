@@ -1,0 +1,163 @@
+/* Override/extend basics for Parking Management */
+.admin-parking-management .card {
+  background: var(--neutral-light);
+  box-shadow: var(--shadow);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+.admin-parking-management .card:hover {
+  box-shadow: 0 4px 12px rgba(44,62,80,0.08);
+}
+
+.admin-parking-management .card-title {
+  color: var(--primary);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.admin-parking-management .list-group-item {
+  background: #fff;
+  border: none;
+  color: var(--neutral-dark);
+  font-size: 15px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.admin-parking-management .list-group-item.active,
+.admin-parking-management .list-group-item:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.admin-parking-management .btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 24px;
+  transition: background 0.2s;
+}
+
+.admin-parking-management .btn-primary:hover,
+.admin-parking-management .btn-primary:focus {
+  background: #16a085;
+}
+
+.admin-parking-management .modal-content {
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.admin-parking-management .modal-header {
+  background: var(--neutral-dark);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+}
+
+.admin-parking-management .modal-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: #fff;
+}
+
+.admin-parking-management .modal-footer {
+  background: var(--neutral-light);
+  border-radius: 0 0 14px 14px;
+}
+
+.admin-parking-management .rounded-circle {
+  box-shadow: var(--shadow);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: var(--neutral-light);
+  border: 2px solid var(--input-border);
+  transition: border 0.2s, background 0.2s;
+}
+.admin-parking-management .rounded-circle.selected,
+.admin-parking-management .rounded-circle:active {
+  border: 3px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.admin-parking-management .alert-danger {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+}
+.admin-parking-management .alert-success {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+
+.admin-parking-management .spinner-border {
+  color: var(--accent);
+}
+
+
+
+.admin-parking-management .modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  background: var(--neutral-light);
+  border-radius: 0 0 14px 14px;
+}
+
+.admin-parking-management .card {
+  background: #fff; /* Ensure card is not same as body */
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 20px 32px;
+  margin-bottom: 24px;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+
+.card-wide {
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  padding: 24px 32px;
+}
+
+.horizontal-list-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.horizontal-list-group .list-group-item {
+  min-width: 120px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+}
+
+.horizontal-list-group .list-group-item.active,
+.horizontal-list-group .list-group-item:hover {
+  background: #198754;
+  color: #fff;
+  border-color: #198754;
+}

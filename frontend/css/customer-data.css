@@ -1,0 +1,224 @@
+/* Page heading */
+.container > h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+/* Table styling */
+.table {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 2px solid var(--accent);
+}
+
+.table thead {
+  background: var(--accent);
+  color: #fff;
+  border-bottom: 2px solid var(--primary);
+}
+
+.table th, .table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  border: none;
+  font-size: 15px;
+}
+
+.table th {
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  transition: background 0.18s;
+}
+
+.table tbody tr:hover {
+  background: var(--neutral-light);
+}
+
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid var(--neutral-light);
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+
+.modal-header {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+}
+
+.modal-title {
+  font-family: var(--font-heading, inherit);
+  font-weight: 600;
+  color: #fff;
+}
+
+.modal-footer {
+  background: var(--neutral-light);
+  border-radius: 0 0 14px 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Chart canvas spacing */
+.modal-body canvas {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 8px;
+}
+
+/* Customer profile section */
+.img-thumbnail {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 10px;
+}
+
+.col-md-4.text-center > div {
+  margin-bottom: 8px;
+}
+
+
+/* Modal Info Card */
+.modal-info-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 24px 18px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.modal-info-card img {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 18px;
+}
+
+.modal-info-details {
+  flex: 1;
+}
+
+.modal-info-details div {
+  margin-bottom: 7px;
+  font-size: 1rem;
+}
+
+/* Chart Card Layout */
+.modal-charts-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.modal-chart-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 18px 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-chart-card h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary, #198754);
+}
+
+.modal-chart-card canvas {
+  
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 8px;
+  width: 100% !important;
+  max-width: 340px;
+  min-height: 180px;
+}
+
+/* Make single chart rows full width */
+.modal-charts-row.single {
+  display: flex;
+  gap: 0;
+  margin-bottom: 18px;
+}
+.modal-charts-row.single .modal-chart-card {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* For multi-chart rows, keep gap and sizing */
+.modal-charts-row:not(.single) .modal-chart-card {
+  flex: 1 1 0;
+  max-width: 50%;
+}
+/* Wider canvas for single chart rows */
+.modal-charts-row.single .modal-chart-card canvas {
+  max-width: 540px;
+  min-width: 320px;
+  
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+     .modal-charts-row.single .modal-chart-card,
+  .modal-charts-row:not(.single) .modal-chart-card {
+    max-width: 100%;
+  }
+  .modal-charts-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .container > h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .table th, .table td {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+  .modal-body canvas {
+    margin-bottom: 12px;
+  }
+  .modal-charts-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .modal-chart-card canvas {
+    max-width: 100%;
+    min-height: 120px;
+  }
+  .modal-info-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,213 @@
+/* Wallet Balance Card */
+.wallet-card {
+  background: linear-gradient(90deg, #f8fafc 70%, var(--accent) 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 520px;
+  margin: 0 auto 32px auto;
+  position: relative;
+}
+
+.wallet-card .balance-label {
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.wallet-card .balance-amount {
+  font-size: 2.1rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-left: 18px;
+}
+
+.wallet-card .btn-topup {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+  margin-left: 32px;
+}
+
+.wallet-card .btn-topup:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Heading and export button row */
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.heading-row h2 {
+  flex: 1;
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.heading-row .btn-export {
+  position: absolute;
+  right: 0;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 22px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+}
+
+.heading-row .btn-export:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Table styling */
+.table {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 2px solid var(--accent);
+}
+
+.table thead {
+  background: var(--accent);
+  color: #fff;
+  border-bottom: 2px solid var(--primary);
+}
+
+.table th, .table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  border: none;
+  font-size: 15px;
+}
+
+.table th {
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+
+/* Table body scroll, max 10 rows visible */
+.table-scroll tbody {
+  display: block;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.table-scroll thead, .table-scroll tfoot {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-scroll tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  transition: background 0.18s;
+}
+
+.table-scroll tbody tr:hover {
+  background: var(--neutral-light);
+}
+
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid var(--neutral-light);
+}
+
+/* Google button style */
+.btn-google {
+  background: #fff;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(66,133,244,0.07);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-google:hover {
+  background: #4285f4;
+  color: #fff;
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+
+.modal-header {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 14px 14px 0 0;
+}
+
+.modal-title {
+  font-family: var(--font-heading, inherit);
+  font-weight: 600;
+  color: #fff;
+}
+
+.modal-footer {
+  background: var(--neutral-light);
+  border-radius: 0 0 14px 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .wallet-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 12px;
+    max-width: 100%;
+  }
+  .wallet-card .btn-topup {
+    margin-left: 0;
+    margin-top: 18px;
+    width: 100%;
+  }
+  .heading-row h2 {
+    font-size: 1.3rem;
+  }
+  .table th, .table td {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+  .heading-row .btn-export {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}

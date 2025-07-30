@@ -1,0 +1,112 @@
+/* Heading and export button flex row */
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.heading-row h2 {
+  flex: 1;
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.heading-row .btn-export {
+  position: absolute;
+  right: 0;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 22px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+}
+
+.heading-row .btn-export:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Table exterior border */
+.table {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 2px solid var(--accent); /* Exterior border */
+}
+
+/* Table head border */
+.table thead {
+  background: var(--accent);
+  color: #fff;
+  border-bottom: 2px solid var(--primary); /* Head border */
+}
+
+.table th, .table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  border: none;
+  font-size: 15px;
+}
+
+.table th {
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+
+/* Table body scroll, max 10 rows visible */
+.table-scroll tbody {
+  display: block;
+  max-height: 480px; /* ~10 rows at 48px each */
+  overflow-y: auto;
+}
+
+.table-scroll thead, .table-scroll tfoot {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-scroll tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  transition: background 0.18s;
+}
+
+.table-scroll tbody tr:hover {
+  background: var(--neutral-light);
+}
+
+/* Table borders between rows */
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid var(--neutral-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .heading-row h2 {
+    font-size: 1.3rem;
+  }
+  .table th, .table td {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+  .heading-row .btn-export {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,79 @@
+/* Background and layout */
+.home-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--neutral-light) 60%, #f8f9fa 100%);
+  overflow-y: auto;
+}
+
+/* Title and subtitle */
+.home-title {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.home-subtitle {
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Card styles */
+.home-card {
+  border-radius: 18px;
+  padding: 32px 18px;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.home-card:hover {
+  box-shadow: 0 6px 24px rgba(44,62,80,0.12);
+}
+.home-card-icon {
+  font-size: 3rem;
+  color: var(--accent);
+}
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent) 60%, var(--primary) 100%);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.btn-success {
+  background: linear-gradient(90deg, var(--accent) 60%, #43a047 100%);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Section cards */
+.home-section-card {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  padding: 28px 22px;
+}
+.section-title {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.expertise-list {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+.expertise-list li {
+  font-size: 1.08rem;
+  color: var(--neutral-dark);
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-title { font-size: 2rem; }
+  .home-card { padding: 20px 8px; }
+  .home-section-card { padding: 18px 8px; }
+}
